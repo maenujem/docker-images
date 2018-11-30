@@ -1,4 +1,7 @@
-FROM pluie/alpine
+# @app      pluie/alpine-mysql
+# @author   a-Sansara https://git.pluie.org/pluie/docker-images
+
+FROM pluie/alpine:latest
 
 MAINTAINER a-Sansara https://github.com/a-sansara
 
