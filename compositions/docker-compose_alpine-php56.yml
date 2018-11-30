@@ -1,0 +1,22 @@
+version: "3.2"
+# alpine with mysql
+# alpine with apache and php5.6-fpm
+
+services:
+  mysql:
+    image: pluie/alpine-mysql
+    expose:
+      - 3306
+    volumes:
+      - ./data/docker/setup.sql:/docker-entrypoint-initdb.d/setup.sql
+# is not executed on container creation -> do manually: mysql -u root -p < /docker-entrypoint-initdb.d/setup.sql (both)
+      - ./data/db/:/var/lib/mysql/
+
+  apache:
+    image: pluie/alpine-apache-fpm-php5
+    environment:
+      - HTTP_SERVER_NAME=fpm.docker
+    ports:
+      - 81:80
+    volumes:
+      - ./web/public/index.php:/app/www/index.php
