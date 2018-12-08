@@ -1,9 +1,10 @@
 # @app      pluie/alpine-apache-fpm-php7
 # @author   a-Sansara https://git.pluie.org/pluie/docker-images
 
-FROM pluie/alpine:latest
+# FROM pluie/alpine:latest
+FROM maenujem/alpine:latest
 
-MAINTAINER a-Sansara https://github.com/a-sansara
+MAINTAINER maenujem https://github.com/maenujem
 
 ADD files.tar /scripts
 

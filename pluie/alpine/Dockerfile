@@ -1,9 +1,10 @@
 # @app      pluie/alpine
 # @author   a-Sansara https://git.pluie.org/pluie/docker-images
 
+# FROM alpine:3.5
 FROM alpine:latest
 
-MAINTAINER a-Sansara https://github.com/a-sansara
+MAINTAINER maenujem https://github.com/maenujem
 
 ADD files.tar /scripts
 
